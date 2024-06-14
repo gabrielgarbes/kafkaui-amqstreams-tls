@@ -36,8 +36,19 @@ Alguns pontos da importância do Kafka UI:
 Para mais informações sobre o Kafka UI, você pode visitar o site oficial.
 https://docs.kafka-ui.provectus.io/
 
+### Variáveis de ambiente
+- Lembre-se de trocar as variáveis de ambiente do manifesto kafkaui/kafkaui.yaml pelas suas configurações de bootstrap e secret.
+- Importante verificar se as portsa 8080 e 9999 estão sendo usadas para caso necessário mudar no arquivo de deployment.
 
 ~~~
 oc apply -f kafkaui/kafkaui.yaml
+~~~
+
+Após a execução verifique a rota criada e abra no seu navegador o interface gráfica do Kafka UI
+~~~
 echo $(oc get route kafkaui -o jsonpath='{.spec.host}')
 ~~~
+
+## Producer
+Adicionei ao repositório se deejar um exemplo em java para a produçao de mensagens no kafka através de uma conexão externa ao cluster
+
