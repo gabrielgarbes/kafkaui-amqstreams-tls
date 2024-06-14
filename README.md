@@ -50,5 +50,5 @@ echo $(oc get route kafkaui -o jsonpath='{.spec.host}')
 ~~~
 
 ## Producer
-Adicionei ao repositório se deejar um exemplo em java para a produçao de mensagens no kafka através de uma conexão externa ao cluster
+Adicionei ao repositório, caso deseje, um exemplo de uma API feito em springboot para a produçao de mensagens no kafka através de uma conexão externa ao cluster
 
